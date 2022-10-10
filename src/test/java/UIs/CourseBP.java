@@ -38,6 +38,7 @@ public class CourseBP {
 
     }
     public void clickButton(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
     }
     public void typeText(WebElement element, String text) {
