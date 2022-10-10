@@ -3,6 +3,7 @@ package APIs;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import net.bytebuddy.utility.RandomString;
 import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,12 +12,13 @@ import utils.TokenTest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Scanner;
 
 import static io.restassured.RestAssured.when;
 
 
 public class ApiCourse1  extends TokenTest {
-    String name = "Kobagdas123";
+    String name = "Kobagdas123"+RandomString.make(5);
     String password = "Sw@gger321";
     @Test
     public void create_new_user(){
